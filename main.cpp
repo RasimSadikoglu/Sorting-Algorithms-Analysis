@@ -5,12 +5,12 @@
 #include "sorts.h"
 
 const int test_table[7][4] =	{{8, 20, 7, 20}, 	    // Insertion Sort
-								{8, 14, 7, 8},   	    // Binary Insertion Sort
-								{17, 17, 17, 17},   	// Merge Sort
-								{14, 9, 8, 7},   	    // Quicksort
-								{14, 12, 12, 7},   	    // Quicksort - MOT
-								{16, 16, 16, 20},   	// Heap Sort
-								{20, 20, 20, 20}};  	// Counting Sort
+				{8, 14, 7, 8},   	    // Binary Insertion Sort
+				{17, 17, 17, 17},   	// Merge Sort
+				{14, 9, 8, 7},   	    // Quicksort
+				{14, 12, 12, 7},   	    // Quicksort - MOT
+				{16, 16, 16, 20},   	// Heap Sort
+				{20, 20, 20, 20}};  	// Counting Sort
 
 void start_tests(ull size, int power);
 
