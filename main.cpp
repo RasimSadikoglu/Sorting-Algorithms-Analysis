@@ -1,7 +1,5 @@
 #include <iostream>
 #include <chrono>
-#include <signal.h>
-#include <unistd.h>
 
 #include "list.h"
 #include "sorts.h"
