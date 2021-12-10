@@ -1,4 +1,4 @@
-#include "sorts.h"
+#include "../include/sorts.h"
 
 #include <chrono>
 #include <iostream>
@@ -39,7 +39,7 @@ void insertion_sort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_insertion_sort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_insertion_sort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -73,7 +73,7 @@ void binary_insertion_sort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_binary_insertion_sort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_binary_insertion_sort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -94,7 +94,7 @@ void merge_sort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_merge_sort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_merge_sort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -115,7 +115,7 @@ void quicksort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_quicksort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_quicksort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -136,7 +136,7 @@ void quicksort_mot(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_quicksort_mot.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_quicksort_mot.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -209,7 +209,7 @@ void heap_sort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_heap_sort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_heap_sort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 
@@ -241,7 +241,7 @@ void counting_sort(std::vector<short> input, std::string id) {
 
     std::chrono::duration<double> duration = end_time - start_time;
 
-    std::ofstream file("logs_counting_sort.txt", std::ios_base::app);
+    std::ofstream file("logs/logs_counting_sort.txt", std::ios_base::app);
 
     add_log(file, input.size(), id, duration.count(), comparison, memory_access, write_into_memory);
 

@@ -1,21 +1,19 @@
-CC=g++
-FLAGS=-c -Wall -Wextra -Wpedantic
+CC:=g++
+FLAGS:=-O3
+SRCS:=src/list.cpp src/sorts.cpp src/main.cpp
 
-output: main.o list.o sorts.o
-	$(CC) main.o list.o sorts.o -o output
+bin/main: bin/ logs/ $(SRCS)
+	$(CC) $(FLAGS) $(SRCS) -o bin/main
 
-main.o: main.cpp
-	$(CC) $(FLAGS) main.cpp
+bin/:
+	mkdir -p bin
 
-list.o: list.h list.cpp
-	$(CC) $(FLAGS) list.cpp
+logs/:
+	mkdir -p logs
 
-sorts.o: sorts.h sorts.cpp
-	$(CC) $(FLAGS) sorts.cpp
-
-run: output
-	rm -rf *sort.txt
-	./output
+run: bin/main
+	rm -f logs/*
+	bin/main
 
 clean:
-	rm -rf *.o *.txt output*
+	rm -rf bin logs

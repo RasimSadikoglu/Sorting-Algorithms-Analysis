@@ -1,8 +1,8 @@
 #include <iostream>
 #include <chrono>
 
-#include "list.h"
-#include "sorts.h"
+#include "../include/list.h"
+#include "../include/sorts.h"
 
 const int test_table[7][4] =	{{8, 20, 7, 20}, 	    // Insertion Sort
 				                {8, 14, 7, 8},   	    // Binary Insertion Sort
